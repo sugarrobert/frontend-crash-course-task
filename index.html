@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Shopping Cart</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+          <button id="shopping-cart-button" class="shopping-cart-button">
+            <i class="fas fa-shopping-cart cart"></i>
+          </button>
+        </div>
+        <!-- nav-container end -->
+      </nav>
+      <!-- navbar end -->
+    </header>
+    <main class="main-container">
+      <div class="shopping-cart-list">
+        <p class="shopping-cart-header">My Cart (3 items)</p>
+        <ul class="shopping-cart-item">
+          <li>
+            <div class="product-img">
+              <img src="./img/img-mouse.jpg" alt="LG502" />
+            </div>
+            <div class="product-info">
+              <p class="product-name">Miš LOGITECH G502 HERO</p>
+              <div class="product-description">
+                <p>Brand: logitech</p>
+                <p>Boja: Crna</p>
+              </div>
+              <p class="product-price">1 x 599,00 kn</p>
+            </div>
+          </li>
+        </ul>
+        <!-- shoping cart item end -->
+        <ul class="shopping-cart-item">
+          <li>
+            <div class="product-img">
+              <img src="./img/img-mouse-pad.jpg" alt="LG502" />
+            </div>
+            <div class="product-info">
+              <p class="product-name">Podloga za miš LOGITECH G640 Gaming</p>
+              <div class="product-description">
+                <p>Brand: Logitech</p>
+                <p>Boja: Crna</p>
+              </div>
+              <p class="product-price">1 x 270,00 kn</p>
+            </div>
+          </li>
+        </ul>
+        <!-- shoping cart item end -->
+        <ul class="shopping-cart-item">
+          <li>
+            <div class="product-img">
+              <img src="./img/img-keyboard.jpg" alt="LG502" />
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Tipkovnica LOGITECH G213 Prodigy Gaming
+              </p>
+              <div class="product-description">
+                <p>Brand: Logitech</p>
+                <p>Boja: Crna</p>
+              </div>
+              <p class="product-price">1 x 549,00 kn</p>
+            </div>
+          </li>
+        </ul>
+        <!-- shoping cart item end -->
+        <div class="button-container">
+          <a href="#" onclick="return false;" class="edit-card-button"
+            >Edit Cart</a
+          >
+          <a href="#" onclick="return false;" class="checkout-button"
+            >CHECKOUT</a
+          >
+        </div>
+      </div>
+      <!-- shopping-cart end -->
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
