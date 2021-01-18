@@ -16,6 +16,10 @@ body {
   line-height: 1.5;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* navbar */
 .navbar {
   margin: 0;
@@ -86,6 +90,7 @@ body {
 }
 
 .shopping-cart-item {
+  display: none;
   padding: 0 0 10px 0;
   border-bottom: 1px solid rgb(165 164 164);
 }
@@ -151,7 +156,23 @@ body {
   cursor: pointer;
 }
 
-.show-cart {
+.scroll-arrow {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: #000;
+  background: #fff;
+  padding: 7px;
+  margin: 10px 0;
+  filter: drop-shadow(0 -1px 1px rgba(0, 0, 0, 0.4));
+}
+
+.show {
   display: block;
+}
+
+.hide {
+  display: none;
 }
 /* end shopping list */

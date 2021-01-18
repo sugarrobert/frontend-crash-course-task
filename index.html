@@ -27,6 +27,9 @@
     <main class="main-container">
       <div class="shopping-cart-list" id="shopping-cart-list">
         <p class="shopping-cart-header">My Cart (3 items)</p>
+        <button class="scroll-arrow" id="scroll-arrow-up">
+          <i class="fas fa-angle-up"></i>
+        </button>
         <ul class="shopping-cart-item">
           <li>
             <div class="product-img">
@@ -77,13 +80,48 @@
           </li>
         </ul>
         <!-- shoping cart item end -->
+        <ul class="shopping-cart-item">
+          <li>
+            <div class="product-img">
+              <img src="./img/imp-headset.jpg" alt="LG502" />
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Slušalice + mikrofon STEELSERIES Arctis 3 Black
+              </p>
+              <div class="product-description">
+                <p>Brand: Steelseries</p>
+                <p>Boja: Crna</p>
+              </div>
+              <p class="product-price">1 x 699,00 kn</p>
+            </div>
+          </li>
+        </ul>
+        <!-- shoping cart item end -->
+        <ul class="shopping-cart-item">
+          <li>
+            <div class="product-img">
+              <img src="./img/img-monitor.jpg" alt="LG502" />
+            </div>
+            <div class="product-info">
+              <p class="product-name">
+                Monitor LG 24GL650-B, 24", TN, FHD 1920x1080px, 1ms, 144Hz
+              </p>
+              <div class="product-description">
+                <p>Brand: LG</p>
+                <p>Boja: Crna</p>
+              </div>
+              <p class="product-price">1 x 1.570,89 kn</p>
+            </div>
+          </li>
+        </ul>
+        <!-- shoping cart item end -->
+        <button class="scroll-arrow" id="scroll-arrow-down">
+          <i class="fas fa-angle-down"></i>
+        </button>
         <div class="button-container">
-          <a href="#" onclick="return false;" class="edit-card-button"
-            >Edit Cart</a
-          >
-          <a href="#" onclick="return false;" class="checkout-button"
-            >CHECKOUT</a
-          >
+          <button class="edit-card-button">Edit Cart</button>
+          <button class="checkout-button">CHECKOUT</button>
         </div>
       </div>
       <!-- shopping-cart end -->
