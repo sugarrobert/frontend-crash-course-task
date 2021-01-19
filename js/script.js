@@ -3,21 +3,16 @@
   const shoppingCartList = document.getElementById('shopping-cart-list');
   const scrollUp = document.getElementById('scroll-arrow-up');
   const scrollDown = document.getElementById('scroll-arrow-down');
-  const items = document.querySelectorAll('.shopping-cart-item');
+  const items = document.querySelectorAll('.shopping-cart-item-wrap');
+  const cartCount = document.getElementById('cart-count');
+  const scrollArrows = document.querySelectorAll('.scroll-arrow');
 
-  cartButton.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    shoppingCartList.classList.toggle('show');
-  });
-
-  let start = 1;
-  let end = 4;
+  let start = 0;
+  let end = 3;
   const itemsArr = Array.from(items);
 
   function showItemsInCart() {
     const arr = itemsArr.slice(start, end);
-
     arr.forEach((item) => {
       item.classList.add('show');
       item.classList.remove('hide');
@@ -31,29 +26,51 @@
     });
   }
 
-  showItemsInCart();
+  cartButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    shoppingCartList.classList.toggle('show');
+    showItemsInCart();
+
+    cartCount.innerText = `My Cart (${itemsArr.length} items)`;
+
+    if (itemsArr.length >= 4) {
+      scrollArrows.forEach((arrow) => {
+        arrow.classList.add('show');
+      });
+    }
+
+    if (start === 0) {
+      scrollUp.classList.add('blure');
+    }
+  });
 
   scrollUp.addEventListener('click', (e) => {
     e.preventDefault();
+
+    start--;
+    end--;
+    hideItemsInCart();
+    showItemsInCart(start, end);
+
+    scrollDown.classList.remove('blure');
+
     if (start === 0) {
-      // scrollUp.style.pointerEvents = 'none';
-    } else {
-      start--;
-      end--;
-      hideItemsInCart();
-      showItemsInCart(start, end);
+      scrollUp.classList.add('blure');
     }
   });
 
   scrollDown.addEventListener('click', (e) => {
     e.preventDefault();
-    if (end === itemsArr.length) {
-      // scrollUp.style.pointerEvents = 'none';
-    } else {
-      start++;
-      end++;
-      hideItemsInCart();
-      showItemsInCart(start, end);
+
+    scrollUp.classList.remove('blure');
+
+    if (end === itemsArr.length - 1) {
+      scrollDown.classList.add('blure');
     }
+    start++;
+    end++;
+    hideItemsInCart();
+    showItemsInCart(start, end);
   });
 })();
