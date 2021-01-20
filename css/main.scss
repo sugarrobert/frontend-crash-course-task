@@ -2,6 +2,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
 
+$font-text: 'Roboto', sans-serif;
+$font-text-product: 'Source Serif Pro', serif;
+$color-text-white: #fff;
+$color-text: #000;
+$color-text-header: #0d0d0d;
+$color-text-light: #707070;
+$color-text-lightest: #979797;
+$color-background: #fff;
+$color-background-lightest: #f9f9f9;
+$color-background-light: #f3f3f3;
+$color-background-light-gray: #bcbcbc;
+$color-border: #000;
+$color-border-light: #bcbcbc;
+$color-border-dark: #0d0d0d;
+
 *,
 *:before,
 *:after {
@@ -9,9 +24,9 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #fff;
-  color: #000;
+  font-family: $font-text;
+  background: $color-background;
+  color: $color-text;
   margin: 0;
   font-weight: 400;
   line-height: 1.5;
@@ -40,17 +55,17 @@ button {
   position: absolute;
   width: 86px;
   height: 75px;
-  background: #f3f3f3;
+  background: $color-background-light;
   border-radius: 2px;
   float: right;
   top: 10px;
   right: 10px;
   border: none;
   cursor: pointer;
-}
 
-.shopping-cart-button:focus {
-  border: 1px solid #000;
+  &:focus {
+    border: 1px solid $color-border;
+  }
 }
 
 .shopping-cart-img {
@@ -66,24 +81,23 @@ button {
   right: 20px;
   float: right;
   padding: 5px 20px;
-  background: #fff;
+  background: $color-background;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.45);
-}
 
-.shopping-cart-list:after {
-  z-index: -1;
-  bottom: 100%;
-  left: 88%;
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 20px solid;
-  content: ' ';
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-bottom-color: #fff;
-  filter: drop-shadow(0 7px 5px #000);
+  &:after {
+    z-index: -1;
+    bottom: 100%;
+    left: 88%;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 20px solid;
+    content: ' ';
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    filter: drop-shadow(0 7px 5px #000);
+  }
 }
 
 .shopping-cart-header {
@@ -91,15 +105,15 @@ button {
   font-weight: 500;
   font-size: 14px;
   line-height: 24px;
-  color: #0d0d0d;
+  color: $color-text-header;
   padding-bottom: 10px;
   margin: 0;
-  border-bottom: 1px solid #bcbcbc;
+  border-bottom: 1px solid $color-background-light-gray;
 }
 
 .shopping-cart-item-wrap {
   display: none;
-  border-bottom: 1px solid #bcbcbc;
+  border-bottom: 1px solid $color-background-light-gray;
 }
 
 .shopping-cart-item {
@@ -130,24 +144,24 @@ button {
 
 .product-name,
 .product-price {
-  font-family: 'Source Serif Pro', serif;
+  font-family: $font-text-product;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
-  color: #0d0d0d;
+  color: $color-text-header;
   margin: 0;
   padding: 5px 0;
 }
 
 .product-brand,
 .product-color {
-  font-family: 'Source Serif Pro', serif;
+  font-family: $font-text-product;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  color: #707070;
+  color: $color-text-light;
 
   p {
     margin: 0;
@@ -158,13 +172,13 @@ button {
   display: none;
   width: 324px;
   height: 30px;
-  background: #f9f9f9;
-  border: 1px solid #bcbcbc;
+  background: $color-background-lightest;
+  border: 1px solid $color-background-light-gray;
   margin: 0;
   cursor: pointer;
 
   i {
-    color: #979797;
+    color: $color-text-lightest;
   }
 }
 
@@ -175,16 +189,16 @@ button {
 }
 
 .edit-card-button {
-  color: #0d0d0d;
+  color: $color-text-header;
   width: 135px;
   height: 42px;
-  border: 1px solid #0d0d0d;
+  border: 1px solid $color-border-dark;
   filter: drop-shadow(0, 0, 0, 0.1);
   cursor: pointer;
 }
 
 .checkout-button {
-  color: #fff;
+  color: $color-text-white;
   border: none;
   width: 177px;
   height: 42px;
